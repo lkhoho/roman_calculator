@@ -11,8 +11,18 @@
 
 int main(void) {
     Suite *suite = suite_create("roman calculator tests");
-    suite_add_tcase(suite, roman_to_int_tests());
+
+    /* 
+     * int_to_roman_tests() is the first unit test I set up. After passing all tests in there, 
+     * I created another unit test called roman_to_int_tests().  
+    */
     suite_add_tcase(suite, int_to_roman_tests());
+    suite_add_tcase(suite, roman_to_int_tests());
+
+    /*
+     * After passing all tests in int_to_roman_tests() and roman_to_int_tests(), roman_calculator_tests()
+     * is created to perform addition test and substraction test.
+    */
     suite_add_tcase(suite, roman_calculator_tests());
 
     SRunner *runner = srunner_create(suite);
