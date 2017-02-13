@@ -11,14 +11,14 @@ static void check_add_result(const char *op1, const char *op2, const char *expec
     char *actual = add(op1, op2);
     ck_assert_msg(strcmp(actual, expected) == 0,
         "Expected %s + %s = %s, but got %s\n", op1, op2, expected, actual);
-    free(actual);
+    // free(actual);
 }
 
 static void check_substract_result(const char *op1, const char *op2, const char *expected) {
     char *actual = substract(op1, op2);
     ck_assert_msg(strcmp(actual, expected) == 0,
         "Expected %s - %s = %s, but got %s\n", op1, op2, expected, actual);
-    free(actual);
+    // free(actual);
 }
 
 START_TEST(test_add)
